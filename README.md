@@ -1,3 +1,7 @@
+[![Dependency Status](https://gemnasium.com/factor-io/connector-irc.svg)](https://gemnasium.com/factor-io/connector-irc)
+[![Build Status](https://travis-ci.org/factor-io/connector-irc.svg)](https://travis-ci.org/factor-io/connector-irc)
+[![Test Coverage](https://codeclimate.com/github/factor-io/connector-irc/badges/coverage.svg)](https://codeclimate.com/github/factor-io/connector-irc)
+
 factor-connector-irc
 ================
 
