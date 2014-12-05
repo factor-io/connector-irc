@@ -17,7 +17,6 @@ describe 'IRC' do
         expect_info message: "Connecting to '#factortest' on 'irc.freenode.net' as 'factor-test-bot'"
         response = expect_return
         expect(response[:payload]).to be_a(Hash)
-        expect(response[:payload]).to include('factor test message')
         expect(response[:payload]['message']).to be_a(String)
         expect(response[:payload]['message']).to eq 'factor test message'
       end
