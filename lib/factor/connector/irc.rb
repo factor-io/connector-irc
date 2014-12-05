@@ -16,6 +16,7 @@ Factor::Connector.service 'irc' do
     fail "IRC: Parameter 'message' is required" unless irc_message
     fail "IRC: parameter 'user' is required" unless irc_user
 
+    info 'Initializing IRC bot'
     irc_bot = Cinch::Bot.new do
       configure do |config|
         config.server   = irc_server
@@ -24,12 +25,14 @@ Factor::Connector.service 'irc' do
         config.nick     = irc_user
       end
       on :connect do
-        info "Sending #{irc_message} to channel #{irc_channel}"
+        info "Sending '#{irc_message}' to '#{irc_channel}' on '#{irc_server}'"
         Channel(irc_channel).send(irc_message)
+        info "Disconnecting from '#{irc_server}'"
         irc_bot.quit(irc_message)
       end
     end
 
+    info "Connecting to '#{irc_channel}' on '#{irc_server}' as '#{irc_user}'"
     irc_bot.start
     action_callback params
   end
