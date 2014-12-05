@@ -15,6 +15,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rspec', '~> 3.1.0'
   s.add_development_dependency 'rake', '~> 10.3.2'
 
-  s.add_runtime_dependency 'factor-connector-api', '~> 0.0.13'
+  s.add_runtime_dependency 'factor-connector-api', '~> 0.0.14'
   s.add_runtime_dependency 'cinch', '~> 2.1.0'
 end

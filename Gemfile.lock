@@ -3,7 +3,7 @@ PATH
   specs:
     factor-connector-irc (0.0.1)
       cinch (~> 2.1.0)
-      factor-connector-api (~> 0.0.13)
+      factor-connector-api (~> 0.0.14)
 
 GEM
   remote: https://rubygems.org/
@@ -12,7 +12,7 @@ GEM
       timers (~> 4.0.0)
     cinch (2.1.0)
     diff-lcs (1.2.5)
-    factor-connector-api (0.0.13)
+    factor-connector-api (0.0.14)
       celluloid (~> 0.16.0)
     hitimes (1.2.2)
     rake (10.3.2)
