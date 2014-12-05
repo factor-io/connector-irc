@@ -11,7 +11,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     cinch (2.1.0)
-    codeclimate-test-reporter (0.4.1)
+    codeclimate-test-reporter (0.4.3)
       simplecov (>= 0.7.1, < 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -19,7 +19,7 @@ GEM
       celluloid (~> 0.16.0)
     hitimes (1.2.2)
     multi_json (1.10.1)
-    rake (10.3.2)
+    rake (10.4.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -44,7 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  codeclimate-test-reporter (~> 0.4.1)
+  codeclimate-test-reporter (~> 0.4.3)
   factor-connector-irc!
-  rake (~> 10.3.2)
+  rake (~> 10.4.2)
   rspec (~> 3.1.0)
