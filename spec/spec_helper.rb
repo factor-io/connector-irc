@@ -5,6 +5,8 @@ require 'factor-connector-api/test'
 CodeClimate::TestReporter.start if ENV['CODECLIMATE_REPO_TOKEN']
 
 Dir.glob('./lib/factor/connector/*.rb').each { |f| require f }
+require './lib/irc_connector'
+require './lib/irc_command'
 
 RSpec.configure do |c|
   c.include Factor::Connector::Test

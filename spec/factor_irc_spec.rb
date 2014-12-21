@@ -13,12 +13,17 @@ describe 'IRC' do
       }
 
       test_instance.test_action('send',params) do
-        expect_info message: 'Initializing IRC bot'
-        expect_info message: "Connecting to '#factortest' on 'irc.freenode.net' as 'factor-test-bot'"
+        expect_info message: "IRC: Connecting to #{params['server']}..."
+        expect_info message: "IRC: Logging in as #{params['user']}"
+        expect_info message: "IRC: Joining channel #{params['channel']}"
+        expect_info message: "IRC: Successfully joined #{params['channel']}"
+        expect_info message: "IRC: Sending message: #{params['message']}"
+        expect_info message: 'IRC: Message sent, exiting'
+
         response = expect_return
         expect(response[:payload]).to be_a(Hash)
         expect(response[:payload]['message']).to be_a(String)
-        expect(response[:payload]['message']).to eq 'factor test message'
+        expect(response[:payload]['message']).to eq params['message']
       end
     end
   end
