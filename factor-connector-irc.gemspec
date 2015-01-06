@@ -17,5 +17,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4.3'
 
   s.add_runtime_dependency 'factor-connector-api', '~> 0.0.14'
-  s.add_runtime_dependency 'cinch', '~> 2.1.0'
+  s.add_runtime_dependency 'irconnect', '~> 0.0.1'
 end
