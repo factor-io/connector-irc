@@ -1,5 +1,5 @@
 require 'factor-connector-api'
-require './lib/irc_connector.rb'
+require 'irconnect'
 
 Factor::Connector.service 'irc' do
   action 'send' do |params|
@@ -15,18 +15,18 @@ Factor::Connector.service 'irc' do
     fail "IRC: parameter 'user' is required" unless irc_user
 
     begin
-        info "IRC: Connecting to #{irc_server}..."
-        irc_bot = IRCConnector.new(irc_server)
-        info "IRC: Logging in as #{irc_nick}"
-        irc_bot.login(irc_nick, 'hostname', 'servername', irc_nick)
-        info "IRC: Joining channel #{irc_channel}"
-        irc_bot.join_channel(irc_channel)
-        info "IRC: Successfully joined #{irc_channel}"
-        info "IRC: Sending message: #{irc_message}"
-        irc_bot.privmsg(irc_channel, irc_message)
-        info 'IRC: Message sent, exiting'
+      info "IRC: Connecting to #{irc_server}..."
+      irc_bot = IRConnect::Connection.new(irc_server)
+      info "IRC: Logging in as #{irc_nick}"
+      irc_bot.login(irc_nick, 'hostname', 'servername', irc_nick)
+      info "IRC: Joining channel #{irc_channel}"
+      irc_bot.join_channel(irc_channel)
+      info "IRC: Successfully joined #{irc_channel}"
+      info "IRC: Sending message: #{irc_message}"
+      irc_bot.privmsg(irc_channel, irc_message)
+      info 'IRC: Message sent, exiting'
     rescue
-        fail "IRC: Failed"
+      fail "IRC: Failed"
     end
 
     action_callback params

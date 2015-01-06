@@ -2,15 +2,14 @@ PATH
   remote: .
   specs:
     factor-connector-irc (0.0.1)
-      cinch (~> 2.1.0)
       factor-connector-api (~> 0.0.14)
+      irconnect (= 0.0.32)
 
 GEM
   remote: https://rubygems.org/
   specs:
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    cinch (2.1.0)
     codeclimate-test-reporter (0.4.3)
       simplecov (>= 0.7.1, < 1.0.0)
     diff-lcs (1.2.5)
@@ -18,6 +17,7 @@ GEM
     factor-connector-api (0.0.14)
       celluloid (~> 0.16.0)
     hitimes (1.2.2)
+    irconnect (0.0.32)
     multi_json (1.10.1)
     rake (10.4.2)
     rspec (3.1.0)

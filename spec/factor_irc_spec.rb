@@ -9,7 +9,7 @@ describe 'IRC' do
         'server'  => 'irc.freenode.net',
         'channel' => '#factortest',
         'message' => 'factor test message',
-        'user'    => 'factor-test-bot'
+        'user'    => 'fiobot'
       }
 
       test_instance.test_action('send',params) do
