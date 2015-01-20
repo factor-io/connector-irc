@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    factor-connector-irc (0.0.1)
+    factor-connector-irc (0.0.2)
       factor-connector-api (~> 0.0.14)
       irconnect (= 0.0.32)
 
@@ -10,7 +10,7 @@ GEM
   specs:
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    codeclimate-test-reporter (0.4.3)
+    codeclimate-test-reporter (0.4.5)
       simplecov (>= 0.7.1, < 1.0.0)
     diff-lcs (1.2.5)
     docile (1.1.5)
@@ -44,7 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  codeclimate-test-reporter (~> 0.4.3)
+  codeclimate-test-reporter (~> 0.4.5)
   factor-connector-irc!
   rake (~> 10.4.2)
   rspec (~> 3.1.0)
