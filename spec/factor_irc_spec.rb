@@ -1,23 +1,28 @@
 require 'spec_helper'
 
-describe 'irc' do
-  describe ':: messages' do
+describe IrcConnectorDefinition do
+  describe :message do
     before do
-      @scope = service_instance('irc_messages')
+      Factor::Connector::Test.timeout = 20
+      @runtime = Factor::Connector::Runtime.new(IrcConnectorDefinition)
     end
 
-    it ':: send' do
+    after do
+      Factor::Connector::Test.reset
+    end
 
+    it :send do
       params = {
-        'server'  => 'irc.freenode.net',
-        'channel' => '#factortest',
-        'message' => 'factor test message',
-        'user'    => 'fiobot'
+        server:  'irc.freenode.net',
+        channel: '#factortest',
+        message: 'factor test message',
+        user:    'fiobot'
       }
+      @runtime.run([:message,:send],params)
 
-      @scope.test_action('send',params) do
-        expect_return
-      end
+      expect(@runtime).to respond
+      data = @runtime.logs.last[:data]
+      expect(data[:status]).to eq('sent')
     end
   end
 end
