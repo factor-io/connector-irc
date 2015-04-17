@@ -14,7 +14,7 @@ GIT
 PATH
   remote: .
   specs:
-    factor-connector-irc (0.0.2)
+    factor-connector-irc (3.0.0)
       irconnect (= 0.0.32)
 
 GEM

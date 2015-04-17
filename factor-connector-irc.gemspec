@@ -2,13 +2,13 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
   s.name          = 'factor-connector-irc'
-  s.version       = '0.0.2'
+  s.version       = '3.0.0'
   s.platform      = Gem::Platform::RUBY
   s.authors       = ['Justin Speers']
   s.email         = ['speersj@fastmail.com']
   s.homepage      = 'https://factor.io'
   s.summary       = 'IRC Factor.io Connector'
-  s.files         = Dir.glob('lib/factor/connector/*.rb')
+  s.files         = Dir.glob('lib/factor-connector-irc.rb')
 
   s.require_paths = ['lib']
 
