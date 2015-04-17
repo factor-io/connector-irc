@@ -12,10 +12,9 @@ Gem::Specification.new do |s|
 
   s.require_paths = ['lib']
 
-  s.add_development_dependency 'rspec', '~> 3.1.0'
+  s.add_development_dependency 'rspec', '~> 3.2.0'
   s.add_development_dependency 'rake', '~> 10.4.2'
-  s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4.5'
+  s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4.7'
 
   s.add_runtime_dependency 'irconnect', '0.0.32'
-  s.add_runtime_dependency 'factor-connector-api', '~> 0.0.14'
 end
