@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email         = ['speersj@fastmail.com']
   s.homepage      = 'https://factor.io'
   s.summary       = 'IRC Factor.io Connector'
-  s.files         = Dir.glob('lib/factor-connector-irc.rb')
+  s.files         = ['lib/factor-connector-irc.rb']
 
   s.require_paths = ['lib']
 
